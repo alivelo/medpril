@@ -1,4 +1,4 @@
  
  python manage.py runserver
  
-http://www.onko-smolensk.ru/
+http://onko-smolensk.ru/
