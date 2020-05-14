@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block title %} {{mains.new_title}} {%  endblock %}
+
+{% block content %}
+
+
+	<div class="blog blog-2">
+	<div class="container">
+		<div class="row">
+			<div class="blog-container  col-md-12 c">
+				<div class="blog-item">
+					<div class="blog-item-image"> <img src="images/blog6.jpg" alt="" />
+
+					</div>
+                     {% for hoss in hoss %}
+					<div class=" single-desc">
+						<div class="blog-item-text">
+							<p>{{ hoss.hospis_start_text|safe }}</p>
+					</div>
+						 </div>
+                    {% endfor %}
+                    {% for hosf in hosf %}
+					<div class="blog-item-poster">
+						<div class="blog-item-poster-image"> <img src="images/blog_author5.jpg" alt="" /> </div>
+						<div class="blog-item-poster-info">
+							<div class="blog-item-poster-name"> <a href="{{ hosf.hospis_file_files.url }}">{{ hosf.hospis_file_title }}</a> </div>
+
+							<div class="blog-item-poster-text"> <a href="#"></a> </div>
+						</div>
+					</div>
+      {% endfor %}
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+{% endblock %}

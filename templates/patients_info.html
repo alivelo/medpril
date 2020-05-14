@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block title %} Информация для пациентов {%  endblock %}
+
+{% block content %}
+
+<div class="container">
+<div class="row">
+
+<div class="blog blog-2">
+
+
+                        {% for inf in inf %}
+						<div class="blog-item">
+
+								<div class="blog-item-info">
+								</div>
+
+							<div class="blog-item-desc">
+								<div class="blog-item-title">
+									<h3><a href="#">{{ inf.informeit_title}}</a></h3>
+								</div>
+
+								<div class="blog-item-text">
+
+									<p>{{inf.informeit_text| truncatewords:15|safe}}</p>
+								</div>
+
+							</div>
+
+						</div>
+                      {% endfor %}
+                    </div>
+
+	<div class="blog-item-desc">
+            {% for des in des %}
+
+							<p>{{ des.description_text|safe}}</p>
+                {% endfor %}
+    </div>
+            </div>
+                    </div>
+{% endblock %}

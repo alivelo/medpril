@@ -1,0 +1,140 @@
+{% extends 'index.html' %}
+
+{% block title %} Главная  {%  endblock %}
+
+{% block content %}
+
+    <div class="page-title page-title-blog bg-pattern" data-bgcolor="199FBE">
+	<div class="page-title-overlay">
+			<h1>Контакты</h1>
+             </div>
+    </div>
+<div class="page-title page-title-contacts bg-pattern" data-bgcolor="3B4B89">
+
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb3a5bd51fb0b6d41e98fe9201efba8a6a5245d258fa371bed236d03152945d7&amp;source=constructor" width="1920" height="500" frameborder="0"></iframe>
+</div>
+<div class="map" id="map"> </div>
+<div class="map-info-container">
+	<div class="map-info" id="map-info">
+		<div class="map-info-contacts">
+			<div class="map-info-phone"> <i class="fa fa-phone"></i>
+				<span>8 (4812) 38 45 91</span>
+
+			</div>
+			<div class="map-info-mail"> <i class="fa fa-envelope"></i>
+				<span><a href="mailto:office@dantal.com">office@dantal.com</a></span>
+			</div>
+
+		</div>
+    </div>
+</div>
+
+<div class="get">
+
+			<h2 class="section-title">Как добраться до нас</h2>
+
+
+ {% for unit in unit %}
+				<div class="get-item-icon"> <i class="fa flaticon-navigation-arrow"></i> </div>
+
+				<h4 class="">{{unit.units_name}}</h4>
+				<p class="">{{unit.units_adres}} тел.{{unit.units_phone}}  {{unit.units_index}} </p>
+                  {% endfor %}
+			</div>
+
+</div>
+
+
+<div class="make">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 make-text">
+
+			</div>
+
+		</div>
+	</div>
+</div>
+<div class="feedback">
+	<div class="container">
+		<div class="row">
+			<h2 class="section-title">
+				<span class="bold700">СВЯЗАТЬСЯ С НАМИ</span>
+			</h2>
+			
+			<form action="" role="form" method="post" autocomplete="off" id="contactForm">
+                {% csrf_token %}
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item name">
+							<input type="text" name="name" id="name" data-validation="required" placeholder="Имя" />
+							<div class="help help-sm help-red">!</div>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item phone">
+							<input type="text" name="phone" id="phone" data-validation="required" placeholder="Телефон" />
+							<div class="help help-sm help-red">!</div>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item email">
+							<input type="text" name="email" id="email" placeholder="E-mail" />
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item">
+							<textarea name="message" id="message" data-validation="required" placeholder="Ваше сообщение.."></textarea>
+							<div class="help help-sm help-red">!</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="display:none;">
+
+				</div>
+				<div class="row latest-row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item">
+						<button class="btn btn-primary">ОТПРАВИТЬ</button>
+					</div>
+				</div>
+				<div class="message">
+					<div class="divide-xs"></div>
+					<div class="alert"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+    <div class="blog blog-2">
+	<div class="container">
+		<div class="row">
+
+
+				<!--	<h3 class="blog-item-media-title">Коментарии </h3>
+					<div class="blog-item-media">
+						<div class="comment first-comm">
+							<div class="comment-avatar"> <img src="images/review2.jpg" alt="" /> </div>
+							<div class="comment-body">
+								<div class="comment-body-info">
+									<span class="comment-body-info-name">Имя</span>
+									<span class="comment-body-info-position">адрем</span>
+									<br>
+									<span class="comment-body-info-date">дата</span>
+								</div>
+
+								<div class="comment-body-text">текст </div>
+							</div>
+
+						</div>
+
+					</div> -->
+
+
+
+
+</div>
+
+    </div>
+    </div>
+{% endblock %}

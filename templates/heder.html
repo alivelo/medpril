@@ -1,0 +1,122 @@
+
+<div class="ramka-7"></div>
+<!-- ========================= TOP BAR ============================== -->
+<div class="top-bar " id="top-bar">
+	<div class="container ">
+		<div class="row">
+
+			<!-- TOP BAR LEFT -->
+			<div class="col-md-6">
+				<div class="top-bar-adress"> <i class="flaticon-navigation-arrow"></i> ул. Маршала Жукова, д.19, г. Смоленск, Смоленская область, 214000 тел. 384591 </div>
+			</div>
+
+			<!-- TOP BAR RIGHT -->
+			<div class="col-md-6 ">
+                    <div class="top-bar-mail ls"> <i class=""></i> <a href="{% url 'admin:index' %}">Вход</a> </div>
+				<div class="top-bar-mail"> <i class="fa fa-envelope"></i> <a href="#">onkolog2016@mail.ru</a> </div>
+
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+<!-- ========================= END TOP BAR ============================== -->
+
+<!-- ========================= HEADER ============================== -->
+    <div >
+<div class=""></div>
+<div class="container   ">
+		<div class="row ">
+        	<div class="col-md-7  " >
+				<div class="helt"> <a href="{% url 'main:mains'  %}"><img src="images/logo.svg" alt="" />
+                    <span class="bold600 color-child-6">Областное государственное бюджетное учреждение здравоохранения
+
+                        Смоленский областной онкологический клинический диспансер</span>
+					</a> </div>
+
+            </div>
+
+		<div class="row ">
+ <div class="row ">
+			<div class="col-md-3 ">
+				<div class="header-phone"> <i class="fa fa-phone"></i> 8 (4812) 38 45 91 </div>
+			</div>
+
+			<div class="col-md-2 ">
+				<div class="header-button"> <a href="{% url 'contact:contact'  %}" class="fancybox-2 btn btn-default">
+					<span class="plus">+</span>
+					Связаться с нами</a> </div>
+
+            </div>
+			</div>
+        </div>
+</div>
+</div>
+
+<!-- ========================= MAIN MENU ============================== -->
+<div id="smartposition"></div>
+
+<div class="top-menu" id="top-menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<div class="mobile-bar-cont">
+					<div class="top-menu-logo"> </div>
+					<div class="mobile-bar">
+						<div class="show-menu" id="show-menu"> <i class="fa fa-bars"></i> </div>
+					</div>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="{% url 'main:mains'  %}">ГЛАВНАЯ</a></li>
+
+					<li class="dropdown"> <a data-toggle="dropdown" href="#">ИНФОРМАЦИЯ ДЛЯ ПАЦИЕНТОВ</a>
+						<ul class="dropdown-menu with-bg" role="menu">
+                            <li><a href="{% url 'patients:patients'  %}">Информация</a></li>
+							<li><a href="#">Платные услуги</a></li>
+							<li><a href="{% url 'healthy:healthys'  %}">Здоровый образ жизни</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"> <a data-toggle="dropdown" href="#">ИНФОРМАЦИЯ ДЛЯ СПЕЦИАЛИСТОВ</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{% url 'drug:drugst'  %}">Лекарственное обеспечение</a></li>
+							<li><a href="{% url 'up:up'  %}">Вышестоящие контролирующие организации</a></li>
+							<li><a href="{% url 'documents:documents'  %}">Документы</a></li>
+							<li><a href="{% url 'job:job'  %}">Вакансии</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"> <a data-toggle="dropdown" href="#">О НАС</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{% url 'historis:historis'  %}">Исторя диспансера</a></li>
+							<li><a href="{% url 'staff:staff'  %}">Медицинские работники</a></li>
+							<li><a href="{% url 'hospis:hospi'  %}">Хоспис</a></li>
+							<li><a href="{% url 'oncol:onlcolog'  %}">Кафедра онкологии</a></li>
+							<li><a href="{% url 'staff:manager'  %}">Административно-управленческий персонал</a></li>
+							<li><a href="{% url 'corrupt:corrupt'  %}">Противодействие коррупции</a></li>
+						</ul>
+					</li>
+
+					<li><a href="{% url 'contact:contact'  %}">КОНТАКТЫ</a></li>
+
+
+				</ul>
+
+
+		</div>
+              <div class="row ">
+        	<div class="col-md-2" >
+              <div class="search">
+                  <form action="" method="post" class="">
+					<input type="text" name="search" id="search" placeholder="Поиск" />
+					<button type="submit"><i class="fa fa-search"></i></button>
+                      </form>
+				</div>
+
+            </div>
+        </div>
+	</div>
+</div>
+<!-- ========================= END MAIN MENU ============================== -->
+</div>
+</div>

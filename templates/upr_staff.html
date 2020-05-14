@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% block title %} Управляющий персонал {%  endblock %}
+
+{% block content %}
+    <br>
+	<div class="blog blog-2">
+
+	<div class="container">
+        {% for manag in manag %}
+
+                  <div class="blog-item">
+ <div class="blog-item-poster">
+		<div class="row">
+
+			<div class="col-md-3 ">
+<div class="blog-item">
+
+
+					<div class=" single-desc">
+
+                             <img src="{{ manag.managing_image.url }}"width="auto" height="230" alt="" />
+                    </div>
+</div>
+            </div>
+                            <div class="col-md-1">
+                            </div>
+			                <div class="col-md-8">
+							    <p>Фамилия: {{ manag.managing_fio }}</p>
+                            	<p>Имя: {{ manag.managing_name }}</p>
+                            	<p>Отчество: {{ manag.managing_middle }}</p>
+                            	<p>Должность: {{ manag.managing_position}}</p>
+                            	<p>Телефон: {{ manag.managing_phone}}</p>
+					        </div>
+
+						 </div>
+   <hr>
+                            </div>
+
+                     {% endfor %}
+			                </div>
+
+</div>
+    </div>
+	    </div>
+</div>
+{% endblock %}

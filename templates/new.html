@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+{% block title %} {{post.new_title}} {%  endblock %}
+
+
+{% block content %}
+<div class="blog blog-2">
+	<div class="container">
+		<div class="row">
+
+			<div class="blog-container  col-md-12 ">
+				<div class="blog-item">
+
+<br>
+						<div class="blog-item-info">
+
+
+<h3 style="text-align: center">{{ post.new_title }}</h3>
+					</div>
+
+					<div class="blog-item-desc single-desc">
+						<div class="blog-item-title">
+
+						</div>
+						<div class="blog-item-text">
+
+							<p> {{ post.new_text|safe }}</p>
+
+
+
+						</div>
+					</div>
+<div class=""><i class="fa fa-calendar-o"></i> {{ post.created_date }}</div>
+					<div class="blog-item-navs"> <a href="#">
+						<div class="blog-item-navs-prev"> <i class="fa fa-angle-left"></i> PREV
+
+						</div>
+						</a> <a href="{% url 'mains:detail' post.id  post.id %}">
+						<div class="blog-item-navs-next"> NEXT <i class="fa fa-angle-right"></i>
+
+						</div>
+						</a> </div>
+				</div>
+
+
+			</div>
+
+	</div>
+</div>
+</div>
+{% endblock %}

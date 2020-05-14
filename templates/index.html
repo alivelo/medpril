@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Creative Responsive Bootstrap Multi-Purpose HTML Template">
+<meta name="keywords" content="H2O, Creative, Agency, Portfolio, Freelancer, Shop, Store,Bootstrap, HTML, Template, One page">
+<meta name="author" content="Dayurv Ivan">
+
+
+    <link rel="stylesheet" href="{% static 'css/master.css' %}" />
+<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
+    <link rel="stylesheet" href={% static "https://fonts.googleapis.com/css2?family=Lobster&display=swap"%} />
+    <title>{% block title %}Title {% endblock %}</title>
+</head>
+<body>
+
+<div class="wrapper">
+{% include 'heder.html' %}
+
+
+{% block content %}
+
+
+
+
+
+{% endblock content %}
+
+{% include 'futer.html' %}
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="totop" id="totop"> <i class="fa fa-angle-up"></i> </div>
+
+
+
+<!-- =========================
+     SCRIPTS
+============================== -->
+<!-- JQUERY -->
+<script src="../static/js/jquery-2.2.0.min.js"></script>
+
+<!-- BOOTSTRAP -->
+<script src="../static/js/bootstrap.min.js"></script>
+
+<!-- SLIDER PRO -->
+<script src="../static/js/jquery.sliderPro.min.js"></script>
+
+<!-- LIGHTBOX -->
+<script src="../static/js/jquery.fancybox.pack.js"></script>
+
+<!-- CAROUSEL -->
+<script src="../static/js/owl.carousel.js"></script>
+
+<!-- STAR RATING -->
+<script src="../static/js/jquery.barrating.min.js"></script>
+
+<!-- ISOTOPE FILTER -->
+<script src="../static/js/isotope.pkgd.min.js"></script>
+
+<!-- SCROLLSPY -->
+<script src="../static/js/scrollspy.js"></script>
+
+<!-- DATEPICKER -->
+<script src="../static/js/moment.js"></script>
+<script src="../static/js/bootstrap-datetimepicker.min.js"></script>
+
+<!-- JQUERY FORM -->
+<script src='../static/js/jquery.form.js'></script>
+
+<!-- FORM VALIDATOR -->
+<script src='../static/js/jquery.form-validator.js'></script>
+
+<!-- SELECT STYLING -->
+<script src='../static/js/jquery.selectBox.js'></script>
+
+<!-- MATCHHEIGHT -->
+<script src='../static/js/jquery.matchHeight.js'></script>
+
+<!-- IMAGES LOADED -->
+<script src='../static/js/imagesloaded.pkgd.min.js'></script>
+
+
+
+<!-- CUSTOM SCRIPT -->
+<script src="../static/js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+{% extends 'index.html' %}
+
+{% block title %} {{mains.new_title}} {%  endblock %}
+
+{% block content %}
+      <div class="get">
+
+			<h2 class="section-title">Страховые медицинские организации</h2>
+   </div>
+    <div class="container">
+		<div class="row">
+        <div class="row">
+        </div>
+        <div class=" col-md-1 ">
+        </div>
+        <div class="blog-item-poster">
+			<div class=" col-md-11 c">
+
+
+
+
+
+ {% for unit in units %}
+				<div class="get-item-icon"> <i class="fa flaticon-navigation-arrow"></i> </div>
+
+				<h4 class="">{{unit.unit_name}}</h4>
+				<p class="">{{unit.unit_adres}} тел.{{unit.unit_phone}}   </p>
+                  {% endfor %}
+            </div>
+			</div>
+</div>
+    </div>
+
+<div class="make">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 make-text">
+
+			</div>
+
+		</div>
+	</div>
+</div>
+	<div class="blog blog-2">
+
+	<div class="container">
+		<div class="row">
+        <div class="row">
+        <div class=" col-md-1 ">
+        </div>
+
+			<div class=" col-md-10 c">
+            <div class="blog-item-poster">
+				<div class="blog-item">
+					<div class="blog-item-image"> <img src="images/blog6.jpg" alt="" />
+
+					</div>
+                     {% for doct in upo %}
+					<div class="blog-item-desc single-desc">
+						<div class="section-title">
+							<h3><a href="#"></a>{{ doct.uporg_title }}</h3>
+						</div>
+						<div class="blog-item-text">
+							<p>{{ doct.uporg_list|safe }}</p>
+					</div>
+						 </div>
+                    {% endfor %}
+                </div>
+            </div>
+                    {% for doc in up %}
+					<div class="blog-item-poster">
+						<div class="blog-item-poster-image"> <img src="images/blog_author5.jpg" alt="" /> </div>
+						<div class="blog-item-poster-info">
+							<div class="blog-item-poster-name"> <a href="{{ doc.upt_file_files.url }}">{{ doc.up_file_title }}</a> </div>
+
+							<div class="blog-item-poster-text"> <a href="#"></a> </div>
+						</div>
+					</div>
+      {% endfor %}
+
+				</div>
+
+			</div>
+        </div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block title %} {{mains.new_title}} {%  endblock %}
+
+{% block content %}
+
+
+	<div class="blog blog-2">
+	<div class="container">
+		<div class="row">
+			<div class="blog-container  col-md-12 c">
+				<div class="blog-item">
+					<div class="blog-item-image"> <img src="images/blog6.jpg" alt="" />
+
+					</div>
+                     {% for oncl in oncl %}
+					<div class="blog-item-desc single-desc">
+						<div class="blog-item-text">
+							<p>{{ oncl.oncololog_text|safe }}</p>
+					</div>
+						 </div>
+                    {% endfor %}
+
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+
+
+
+				<div class="right-bar-categories">
+					<h3 class="right-bar-title"><i class=""></i> Новости</h3>
+					<ul>
+                        {%if title_news.count <= 7 %}
+                 {% for a in title_news %}
+						<li><a href=''>{{ a.new_title }}</a></li>
+                     <div class=""><i class="fa fa-calendar-o"></i> {{ a.created_date }}</div>
+                        {% endfor %}
+					</ul>
+				</div>
+		    </div>
+        </div>
+
+
+
+                            {% endif %}

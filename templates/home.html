@@ -1,0 +1,106 @@
+
+
+
+
+
+<div class="container">
+<div class="row">
+
+
+
+
+    <div class="col-md-9">
+    <div>
+
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <!-- Индикаторы -->
+
+  <ol class="carousel-indicators">
+ {% for imgts in imgts %}
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1" class="active"></li>
+
+  </ol>
+
+  <div class="carousel-inner">
+
+    <div class="item active">
+
+      <img src="{{ imgts.imageng_nav.url }}" alt="...">
+{% endfor %}
+    </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Элементы управления -->
+  <a class="left carousel-control " href="#carousel" role="button" data-slide="prev">
+    <span class="glyphicon " aria-hidden="true"></span>
+    <span class="sr-only">Предыдущий</span>
+  </a>
+  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+    <span class="glyphicon " aria-hidden="true"></span>
+    <span class="sr-only">Следующий</span>
+  </a>
+</div>
+
+<div class="blog blog-2">
+
+
+                        {% for post in title_news %}
+						<div class="blog-item">
+
+								<div class="blog-item-info">
+									<div class="blog-item-date"><i class="fa fa-calendar-o"></i> {{ post.created_date }}</div>
+								</div>
+
+							<div class="blog-item-desc">
+								<div class="blog-item-title">
+									<h3><a href="{% url 'mains:detail' post.id %}">{{ post.new_title}}</a></h3>
+								</div>
+
+								<div class="blog-item-text">
+
+									<p>{{ post.new_text| truncatewords:20|safe}}</p>
+								</div>
+
+							</div>
+
+						</div>
+                      {% endfor %}
+                    </div>
+
+                         </div>
+
+
+
+
+ <div class="blog blog-2">
+
+	<div class="blog-item-desc">
+{%if maint %}
+            {% for maint in maint %}
+							<p>{{ maint.main_text|safe}}</p>
+{% endfor %}
+                    {% endif %}
+    </div>
+</div>
+</div>
+    </div>
+<div class="row">
+    <div class="col-md-3">
+       {% include 'novelty.html' %}
+
+	</div>
+    </div>
+    </div>
+</div>
+
+    </div>
+
+
+
+
+</div>
